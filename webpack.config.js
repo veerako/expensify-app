@@ -20,8 +20,14 @@ module.exports = (env) => {
         use: ['style-loader',
         'css-loader',
         'sass-loader']
-        }]
+        }],
+        
     },
+    node: {
+        fs:'empty',
+        child_process: 'empty',
+
+    } ,
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
 
     devServer: {
@@ -29,7 +35,8 @@ module.exports = (env) => {
         historyApiFallback: true,
     },
 
-    }
+}
+
 
 };
 
