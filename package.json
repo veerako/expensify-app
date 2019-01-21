@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack --mode=development --watch",
+    "build:dev": "webpack --mode=development --watch",
+    "build:prod": "webpack --mode=development --watch -p --env production",
     "dev-server": "webpack-dev-server --mode=development",
     "test": "jest --watchAll --config=jest.config.json"
   },
