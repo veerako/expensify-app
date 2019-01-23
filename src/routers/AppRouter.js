@@ -1,29 +1,25 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import ExpenseDash from '../components/ExpenseDash';
-import AddExpenseDash from '../components/AddExpenseDash';
-import EditExpenseDash from '../components/EditExpenseDash';
-import HelpExpenseDash from '../components/HelpExpenseDash';
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
+import AddExpensePage from '../components/AddExpensePage';
+import EditExpensePage from '../components/EditExpensePage';
+import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 
 const AppRouter = () => (
-    <BrowserRouter> 
+  <BrowserRouter>
     <div>
-        <Header/>
-        <Switch>
-        <Route path="/" component={ExpenseDash} exact={true}/>
-        <Route path="/create" component={AddExpenseDash} />
-        <Route path="/edit/:id" component={EditExpenseDash} />
-        <Route path="/help" component={HelpExpenseDash} />
+      <Header />
+      <Switch>
+        <Route path="/" component={ExpenseDashboardPage} exact={true} />
+        <Route path="/create" component={AddExpensePage} />
+        <Route path="/edit/:id" component={EditExpensePage} />
+        <Route path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
-    </Switch>
+      </Switch>
     </div>
-    </BrowserRouter>
-
+  </BrowserRouter>
 );
-export default AppRouter;
-function newFunction() {
-    return <Header />;
-}
 
+export default AppRouter;
