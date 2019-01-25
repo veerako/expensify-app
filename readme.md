@@ -15,8 +15,10 @@ git push heroku master
 
 
 yarn install
-yarn run dev-server
+yarn run dev-server for dev purpose localhost:3000
 yarn run build:prod
 yarn run start
+
+
 
 
