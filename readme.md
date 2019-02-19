@@ -60,3 +60,5 @@ database.ref('expenses').on('child_removed',(snapshot)=>{
       console.log(snapshot.key, snapshot.val());
   });
 
+make changes ex: expenses.js (/actions/expenses)
+write a test case expenses.test.js (/test/actions/expenses.test)
